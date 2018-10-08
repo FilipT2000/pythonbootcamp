@@ -1,0 +1,45 @@
+# x = "napis 1"
+# y = "napis 2"
+#
+# imie = "Filip"
+# wzrost = "175"
+#
+# print("Imię:", imie, sep ="   ")
+# print("Wzrost:\n", wzrost, sep ="+")
+
+
+# rzutowanie - str(zmiennna), int(zmienna), float(zmienna)
+# komment - <Ctrl + />
+
+
+# cena = 10
+# waga = 2.5
+#
+# cena = float(input("Podaj cenę kg jabłek: "))
+#
+# print("Cena za kg:", cena)
+# print("Waga:", waga)
+# print("Należność:", round(cena*waga))
+
+#  operator porównania == Czy x równa się y ?
+#  != - czy x jest różne od y
+# oeprator: and, or, not
+
+
+# miastoA = str(input("Podaj nazwę pierwszego miasta: "))
+# miastoB = str(input("Podaj nazwę drugiego miasta: "))
+# dystans = int(input(f"Dystans {miastoA}-{miastoB}: "))
+# cena = float(input("Podaj cenę 1 litra paliwa: "))
+# spalanie = float(input("Podaj spalanie: "))
+#
+# print(f"Koszt przejazdu {miastoA}-{miastoB} to {int(dystans/100*spalanie*cena)} PLN")
+
+# x = int(input("Podaj liczbę: "))
+# print(f"Większa od 10: {x>10}")
+# print("Mniejsza równa 15:", x<=15)
+# print("Podzielna przez 2:", x % 2==0)
+#
+# print(f"Podzielna przez 3 i większa od 10: {x%3 == 0 and x>10}")
+
+# x = int(input("podaj liczbę: "))
+# print(f"Jest siódemka? {x==7} Podzielna przez 2,3 i większa od 10 {x%2==0 and x%3==0 and x>10}")
