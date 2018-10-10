@@ -1,0 +1,22 @@
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
+z = str(input("podaj rodzaj operacji: "))
+
+if z=="+":
+    print(x+y)
+elif z=="-":
+    print(x-y)
+elif z=="*":
+    print(x*y)
+elif z=="/" and y!=0:
+    print(x/y)
+elif z=="/" and y==0:
+    print("Dzielenie przez zero!")
+else:
+    print("Błędny operator")
+
+
+#  dir("1") - pokazuje funkcje i metody, które moga zosatć zastosowane do wyrażenia w nawiasie
+
+c = "ala ma kota".capitalize()
+print(c)

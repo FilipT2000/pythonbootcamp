@@ -1,0 +1,26 @@
+x = int(input("Podaj x: "))
+y = int(input("Podaj y: "))
+
+if x > 100:
+    print("Jesteś poza planszą")
+if y > 100:
+    print("Jesteś poza planszą")
+
+if y>=90 and x>=90:
+    print("Jesteś w prawym górnym rogu")
+elif y>=90 and x<=10:
+    print("Jesteś w lewym górnym rogu")
+elif y>=90 and x>10 and x<90:
+    print("Jesteś przy górnej krawędzi")
+elif y<=10 and x<=10:
+    print("Jesteś w lewym dolnym rogu")
+elif y <= 10 and x >= 90:
+        print("Jesteś w prawym dolnym rogu")
+elif y<=10: #and x>10 and x<90 - dzieki elif można pominąc ten warunek bo jest srpawdzany wczesniej#
+    print("Jesteś przy dolnej krawędzi")
+elif y<90 and y>10 and x<=10:
+    print("Jesteś przy lewej krawędzi")
+elif y<90 and y>10 and x>=90:
+    print("Jesteś przy prawej krawędzi")
+else:
+    print("jesteś w centrum")
