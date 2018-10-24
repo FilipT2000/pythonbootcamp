@@ -5,10 +5,10 @@ print("    ", end="")
 for i in range(10):
     print(f"{i:3}", end=" ")
 print()
-print()
+print("      _____________________________________")
 
 while n<=9:
-    print(n, end="   ")
+    print(n, end=".  ")
     for i in range(10):
         print(f"{i*n:3}", end=" ")
     print()
