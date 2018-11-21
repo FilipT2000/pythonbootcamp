@@ -7,10 +7,17 @@ class Postac:
 
     def __init__(self, imie, atak, zdrowie):
         self.imie = imie
-        self.atak = atak
+        self._atak = atak
         self.zdrowie = zdrowie
         self.max_zdrowie = zdrowie
         self.ekwipunek = []
+
+    @property
+    def atak(self):
+        wynik = self.moc_ataku()
+        for i in self.ekwipunek:
+            wynik += i.bonus_atk
+        return wynik
 
     def przedstaw_sie(self):
         print(f"Jestem {self.imie}, mam {self.atak} ataku i {self.zdrowie}/{self.max_zdrowie} życia.")
@@ -19,10 +26,10 @@ class Postac:
         if self.czy_zyje():
             napis = "Ewkipunek:\n"
             for x in self.ekwipunek:
-                napis += str(x) + "n"
-            return f"Jestem {self.imie}, mam {self.atak} ataku i {self.zdrowie}/{self.max_zdrowie} życia."
+                napis += str(x) + "\n"
+            return f"Jestem {self.imie}, mam {self.atak} ataku i {self.zdrowie}/{self.max_zdrowie} życia.\n" + napis
         else:
-            return
+            return f"jestem {self.imie}, mam{self.atak} ataku i nie zyje"
 
 
     def wylecz(self, ile):
@@ -49,14 +56,17 @@ class Postac:
         return False
 
     def moc_ataku(self):
-        moc = randint(self.atak//2, self.atak)
+        moc = randint(self._atak//2, self._atak)
         return moc
 
-    def daj_przedmiot(przedmiot):
+    def daj_przedmiot(self, przedmiot):
         self.ekwipunek.append(przedmiot)
 
-    def atak_plus():
-        pass
+    def atak_plus(self):
+            cios = self.atak
+            for i in self.ekwipunek:
+                cios += i.bonus_atk
+            return cios
 
     @staticmethod
     def walka(atakujacy, broniacy):
@@ -79,16 +89,18 @@ rufus = Postac("Rufus", 3, 100)
 janusz = Postac("janusz", 4, 80)
 miotla = Przedmiot("Miotła", 5)
 
+
+# Postac.walka(rufus, janusz)
+
 rufus.daj_przedmiot(miotla)
-Postac.walka(rufus, janusz)
-
-
 rufus.przedstaw_sie()
-rufus.obrazenia(100)
+print(rufus)
+# rufus.obrazenia(20)
 print(rufus.czy_zyje())
 rufus.wylecz(70)
 
 
+print(f"bonus atk: {rufus.atak_plus()}")
 
 def test_nowa_postac():
     postac = Postac("Albert", 1, 20)

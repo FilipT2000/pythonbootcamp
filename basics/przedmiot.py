@@ -5,4 +5,4 @@ class Przedmiot:
         self.bonus_atk = bonus_do_ataku
 
     def __str__(self):
-        return f"{self.nazwa}, {self.bonus.atk} do ataku"
+        return f"{self.nazwa}, {self.bonus_atk} do ataku"
