@@ -28,7 +28,7 @@ entry3 = tkinter.Entry(master=root)
 entry3.grid(row=2, column = 1)
 
 label = tkinter.Label(master=root, text="Cena litra")
-label.grid(row=0, column=0)
+label.grid(row=0, column=0, sticky=tkinter.EW)
 
 label2 = tkinter.Label(master=root, text="Spalanie na 100 km")
 label2.grid(row=1, column=0)
