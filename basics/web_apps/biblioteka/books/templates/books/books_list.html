@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+To sa moje książki
+
+{% for k in books %}
+<div class=""book">
+    <h2>{{ k/title }}</h2>
+    {{ k.author }}
+    {{ k.description }}
+    {{ k.cover }}
+</div>
+{% endfor %}
+{{books}}
+
+</body>
+</html>
